@@ -21,7 +21,7 @@ html{
   scroll-behavior: smooth;
 
   background:
-    radial-gradient(1200px 700px at 20% 15%, rgba(120, 90, 255, 0.20), transparent 60%),
+    radial-gradient(1200px 700px at 20% 15%, rgba(120, 90, 255, 0.20), transparent 59%),
     radial-gradient(900px 600px at 80% 30%, rgba(80, 240, 220, 0.12), transparent 55%),
     linear-gradient(180deg, var(--bg), var(--bg2), var(--bg));
 }
