@@ -13,8 +13,7 @@
   --glass2: rgba(255,255,255,0.075);
 
   --shadow: 0 18px 55px rgba(0,0,0,0.55);
-
-  /* Sleeker: less round */
+  
   --r: 14px;
   --r2: 10px;
 
@@ -35,7 +34,6 @@ html, body{
 html{
   scroll-behavior: smooth;
 
-  /* Cleaner background: slightly less “party lights” */
   background:
     radial-gradient(1000px 700px at 18% 12%, rgba(120, 90, 255, 0.14), transparent 62%),
     radial-gradient(900px 650px at 82% 28%, rgba(80, 240, 220, 0.08), transparent 60%),
@@ -52,7 +50,6 @@ body{
   position: relative;
 }
 
-/* Subtle lighting overlay (reduced) */
 body::before{
   content:"";
   position: fixed;
@@ -74,7 +71,6 @@ body::before{
   z-index: 2;
 }
 
-/* ===== Topbar ===== */
 .topbar{
   position: fixed;
   inset: 14px 0 auto 0;
@@ -117,7 +113,6 @@ body::before{
   border-bottom-color: var(--line2);
 }
 
-/* Burger */
 .menuBtn{
   display: none;
   background: transparent;
@@ -136,7 +131,6 @@ body::before{
   opacity: 0.85;
 }
 
-/* ===== Hero ===== */
 .hero{
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -177,7 +171,6 @@ body::before{
   max-width: 58ch;
 }
 
-/* ===== Buttons (sleek, not pill) ===== */
 .ctaRow{
   display: flex;
   gap: 12px;
@@ -219,7 +212,6 @@ body::before{
 }
 .btn:active{ transform: translateY(0px); }
 
-/* ===== Cards (less “bubbly glass”) ===== */
 .glassCard,
 .panel,
 .projCard,
@@ -230,7 +222,6 @@ body::before{
   box-shadow: none;
 }
 
-/* Hero right card: still special, but cleaner */
 .glassCard{
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
   border: 1px solid rgba(234,241,255,0.12);
@@ -240,7 +231,6 @@ body::before{
   overflow: hidden;
 }
 
-/* Reduce the “glowy blob” */
 .glassCard::before{
   content: "";
   position: absolute;
@@ -268,7 +258,6 @@ body::before{
   z-index: 1;
 }
 
-/* ===== Chips (more minimal) ===== */
 .chipRow{
   display: flex;
   gap: 8px;
@@ -281,13 +270,12 @@ body::before{
 .chip{
   font-size: 12px;
   padding: 7px 10px;
-  border-radius: 999px; /* chips can stay pill, it reads “label” */
+  border-radius: 999px;
   border: 1px solid rgba(234,241,255,0.10);
   background: rgba(255,255,255,0.025);
   color: var(--muted);
 }
 
-/* ===== Sections ===== */
 .section{ padding: 48px 0 10px; }
 .sectionHead h2{
   margin: 0;
@@ -300,7 +288,6 @@ body::before{
   line-height: 1.65;
 }
 
-/* Layout grids */
 .aboutGrid{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -322,7 +309,6 @@ body::before{
 }
 .skillChips{ display: flex; gap: 8px; flex-wrap: wrap; }
 
-/* Fancy list */
 .fancyList{
   list-style: none;
   padding: 0;
@@ -344,7 +330,6 @@ body::before{
   opacity: 0.95;
 }
 
-/* ===== Projects ===== */
 .cardGrid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -416,7 +401,7 @@ body::before{
   transform: translateY(-1px);
 }
 
-/* ===== Timeline ===== */
+
 .timeline{
   margin-top: 18px;
   border-left: 1px solid var(--line);
@@ -450,7 +435,6 @@ body::before{
 .tWhen{ font-size: 12px; color: var(--muted2); }
 .tBody p{ margin: 0; color: var(--muted); line-height: 1.75; }
 
-/* ===== Contact ===== */
 .contactGrid{
   margin-top: 18px;
   display: grid;
@@ -486,7 +470,6 @@ body::before{
   transform: translateY(-1px);
 }
 
-/* ===== Footer + toast ===== */
 .footer{
   padding: 34px 0 60px;
   color: var(--muted2);
@@ -501,7 +484,6 @@ body::before{
   color: rgba(80,240,220,0.95);
 }
 
-/* Spotlight effect: cleaner + dimmer */
 .spotlight{
   position: fixed;
   inset: 0;
@@ -513,7 +495,6 @@ body::before{
   z-index: 1;
 }
 
-/* Reveal */
 .reveal{
   opacity: 0;
   transform: translateY(10px);
@@ -526,7 +507,6 @@ body::before{
   filter: blur(0px);
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 900px){
   .hero{ grid-template-columns: 1fr; padding-top: 20px; }
   .cardGrid{ grid-template-columns: 1fr; }
