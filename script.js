@@ -1,9 +1,7 @@
-// Smooth, lightweight interactivity. No frameworks.
 
 const yearEl = document.getElementById("year");
 yearEl.textContent = new Date().getFullYear();
 
-// Mobile menu
 const menuBtn = document.getElementById("menuBtn");
 const topbar = document.querySelector(".topbar");
 menuBtn?.addEventListener("click", () => {
@@ -11,7 +9,7 @@ menuBtn?.addEventListener("click", () => {
   menuBtn.setAttribute("aria-expanded", String(isOpen));
 });
 
-// Close menu when clicking a nav link (mobile)
+
 document.querySelectorAll(".nav a").forEach(a => {
   a.addEventListener("click", () => {
     if (topbar.classList.contains("open")) {
@@ -21,7 +19,7 @@ document.querySelectorAll(".nav a").forEach(a => {
   });
 });
 
-// Scroll reveal
+
 const revealEls = Array.from(document.querySelectorAll(".reveal"));
 const io = new IntersectionObserver((entries) => {
   for (const e of entries) {
@@ -31,7 +29,7 @@ const io = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => io.observe(el));
 
-// Spotlight cursor glow
+
 const spotlight = document.querySelector(".spotlight");
 window.addEventListener("pointermove", (e) => {
   if (!spotlight) return;
@@ -41,14 +39,14 @@ window.addEventListener("pointermove", (e) => {
   spotlight.style.setProperty("--y", `${y}%`);
 });
 
-// Subtle 3D tilt on hover
+
 function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
 
 document.querySelectorAll("[data-tilt]").forEach(card => {
   card.addEventListener("pointermove", (e) => {
     const r = card.getBoundingClientRect();
-    const px = (e.clientX - r.left) / r.width;   // 0..1
-    const py = (e.clientY - r.top) / r.height;   // 0..1
+    const px = (e.clientX - r.left) / r.width;   
+    const py = (e.clientY - r.top) / r.height;   
     const rx = clamp((0.5 - py) * 10, -8, 8);
     const ry = clamp((px - 0.5) * 12, -10, 10);
     card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-2px)`;
@@ -59,7 +57,7 @@ document.querySelectorAll("[data-tilt]").forEach(card => {
   });
 });
 
-// Copy email button
+
 const toast = document.getElementById("toast");
 const copyBtn = document.getElementById("copyEmail");
 
